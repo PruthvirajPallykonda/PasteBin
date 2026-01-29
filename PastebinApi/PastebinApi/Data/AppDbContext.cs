@@ -20,4 +20,5 @@ namespace PastebinApi.Data
                 entity.Property(e => e.Content).IsRequired();
             });
         }
+    }
 }
