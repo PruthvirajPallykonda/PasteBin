@@ -1,7 +1,40 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Codes\\Pastebin\\PastebinApi\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5C519551-63D6-C8B5-AC0A-B33250D1333F}|PastebinApi\\PastebinApi.csproj|d:\\codes\\pastebin\\pastebinapi\\pastebinapi\\pastebinapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{5C519551-63D6-C8B5-AC0A-B33250D1333F}|PastebinApi\\PastebinApi.csproj|solutionrelative:pastebinapi\\pastebinapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C519551-63D6-C8B5-AC0A-B33250D1333F}|PastebinApi\\PastebinApi.csproj|d:\\codes\\pastebin\\pastebinapi\\pastebinapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C519551-63D6-C8B5-AC0A-B33250D1333F}|PastebinApi\\PastebinApi.csproj|solutionrelative:pastebinapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C519551-63D6-C8B5-AC0A-B33250D1333F}|PastebinApi\\PastebinApi.csproj|d:\\codes\\pastebin\\pastebinapi\\pastebinapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5C519551-63D6-C8B5-AC0A-B33250D1333F}|PastebinApi\\PastebinApi.csproj|solutionrelative:pastebinapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C519551-63D6-C8B5-AC0A-B33250D1333F}|PastebinApi\\PastebinApi.csproj|d:\\codes\\pastebin\\pastebinapi\\pastebinapi\\controllers\\pasteviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C519551-63D6-C8B5-AC0A-B33250D1333F}|PastebinApi\\PastebinApi.csproj|solutionrelative:pastebinapi\\controllers\\pasteviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C519551-63D6-C8B5-AC0A-B33250D1333F}|PastebinApi\\PastebinApi.csproj|d:\\codes\\pastebin\\pastebinapi\\pastebinapi\\controllers\\pastescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C519551-63D6-C8B5-AC0A-B33250D1333F}|PastebinApi\\PastebinApi.csproj|solutionrelative:pastebinapi\\controllers\\pastescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C519551-63D6-C8B5-AC0A-B33250D1333F}|PastebinApi\\PastebinApi.csproj|d:\\codes\\pastebin\\pastebinapi\\pastebinapi\\controllers\\healthzcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C519551-63D6-C8B5-AC0A-B33250D1333F}|PastebinApi\\PastebinApi.csproj|solutionrelative:pastebinapi\\controllers\\healthzcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C519551-63D6-C8B5-AC0A-B33250D1333F}|PastebinApi\\PastebinApi.csproj|d:\\codes\\pastebin\\pastebinapi\\pastebinapi\\models\\paste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C519551-63D6-C8B5-AC0A-B33250D1333F}|PastebinApi\\PastebinApi.csproj|solutionrelative:pastebinapi\\models\\paste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C519551-63D6-C8B5-AC0A-B33250D1333F}|PastebinApi\\PastebinApi.csproj|d:\\codes\\pastebin\\pastebinapi\\pastebinapi\\models\\createpasterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C519551-63D6-C8B5-AC0A-B33250D1333F}|PastebinApi\\PastebinApi.csproj|solutionrelative:pastebinapi\\models\\createpasterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +42,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PastebinApi.http",
+              "DocumentMoniker": "D:\\Codes\\Pastebin\\PastebinApi\\PastebinApi\\PastebinApi.http",
+              "RelativeDocumentMoniker": "PastebinApi\\PastebinApi.http",
+              "ToolTip": "D:\\Codes\\Pastebin\\PastebinApi\\PastebinApi\\PastebinApi.http",
+              "RelativeToolTip": "PastebinApi\\PastebinApi.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-01-29T14:15:52.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Codes\\Pastebin\\PastebinApi\\PastebinApi\\appsettings.json",
+              "RelativeDocumentMoniker": "PastebinApi\\appsettings.json",
+              "ToolTip": "D:\\Codes\\Pastebin\\PastebinApi\\PastebinApi\\appsettings.json",
+              "RelativeToolTip": "PastebinApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-29T13:38:47.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Codes\\Pastebin\\PastebinApi\\PastebinApi\\Program.cs",
+              "RelativeDocumentMoniker": "PastebinApi\\Program.cs",
+              "ToolTip": "D:\\Codes\\Pastebin\\PastebinApi\\PastebinApi\\Program.cs",
+              "RelativeToolTip": "PastebinApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T13:37:55.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PasteViewController.cs",
+              "DocumentMoniker": "D:\\Codes\\Pastebin\\PastebinApi\\PastebinApi\\Controllers\\PasteViewController.cs",
+              "RelativeDocumentMoniker": "PastebinApi\\Controllers\\PasteViewController.cs",
+              "ToolTip": "D:\\Codes\\Pastebin\\PastebinApi\\PastebinApi\\Controllers\\PasteViewController.cs",
+              "RelativeToolTip": "PastebinApi\\Controllers\\PasteViewController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T13:35:30.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PastesController.cs",
+              "DocumentMoniker": "D:\\Codes\\Pastebin\\PastebinApi\\PastebinApi\\Controllers\\PastesController.cs",
+              "RelativeDocumentMoniker": "PastebinApi\\Controllers\\PastesController.cs",
+              "ToolTip": "D:\\Codes\\Pastebin\\PastebinApi\\PastebinApi\\Controllers\\PastesController.cs",
+              "RelativeToolTip": "PastebinApi\\Controllers\\PastesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T13:34:13.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HealthzController.cs",
+              "DocumentMoniker": "D:\\Codes\\Pastebin\\PastebinApi\\PastebinApi\\Controllers\\HealthzController.cs",
+              "RelativeDocumentMoniker": "PastebinApi\\Controllers\\HealthzController.cs",
+              "ToolTip": "D:\\Codes\\Pastebin\\PastebinApi\\PastebinApi\\Controllers\\HealthzController.cs",
+              "RelativeToolTip": "PastebinApi\\Controllers\\HealthzController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T13:33:11.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Paste.cs",
+              "DocumentMoniker": "D:\\Codes\\Pastebin\\PastebinApi\\PastebinApi\\Models\\Paste.cs",
+              "RelativeDocumentMoniker": "PastebinApi\\Models\\Paste.cs",
+              "ToolTip": "D:\\Codes\\Pastebin\\PastebinApi\\PastebinApi\\Models\\Paste.cs",
+              "RelativeToolTip": "PastebinApi\\Models\\Paste.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T13:25:25.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CreatePasteRequest.cs",
+              "DocumentMoniker": "D:\\Codes\\Pastebin\\PastebinApi\\PastebinApi\\Models\\CreatePasteRequest.cs",
+              "RelativeDocumentMoniker": "PastebinApi\\Models\\CreatePasteRequest.cs",
+              "ToolTip": "D:\\Codes\\Pastebin\\PastebinApi\\PastebinApi\\Models\\CreatePasteRequest.cs",
+              "RelativeToolTip": "PastebinApi\\Models\\CreatePasteRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T13:24:52.319Z"
             }
           ]
         }
