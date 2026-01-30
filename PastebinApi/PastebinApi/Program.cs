@@ -3,47 +3,45 @@ using PastebinApi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add EF Core with Neon Postgres
+// ✅ EF Core + Neon = perfect
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// ✅ CORS POLICY DEFINITION (ADD THIS)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
         policy
-            .WithOrigins("https://pruthvirajpallykonda.github.io")
+            .WithOrigins(
+                "https://pruthvirajpallykonda.github.io",           // GitHub Pages
+                "https://pastebin-lite-ui-*.up.railway.app"         // Railway frontend
+            )
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
 });
 
-// Add controllers
+// ✅ Controllers + Swagger = good
 builder.Services.AddControllers();
-
-// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Swagger UI
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-// ❌ REMOVE HTTPS redirection (Railway already handles SSL)
-// app.UseHttpsRedirection();
-
-// ✅ USE CORS **BEFORE** Authorization (CRITICAL)
-app.UseCors("AllowFrontend");
-
+// ✅ CORS ENABLED
+app.UseCors("AllowFrontend");  // Now works!
 app.UseAuthorization();
+
 app.MapControllers();
 
-// 🚨 RAILWAY PORT BINDING (KEEP THIS)
+// ✅ Railway port binding
 var port = Environment.GetEnvironmentVariable("PORT");
 if (!string.IsNullOrEmpty(port))
 {

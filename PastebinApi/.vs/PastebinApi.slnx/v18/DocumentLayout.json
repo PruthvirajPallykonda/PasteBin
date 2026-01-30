@@ -29,6 +29,10 @@
           "SelectedChildIndex": 4,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "PasteViewController.cs",
@@ -38,12 +42,7 @@
               "RelativeToolTip": "PastebinApi\\Controllers\\PasteViewController.cs",
               "ViewState": "AgIAABoAAABAMzMzMzMrwCwAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T13:53:15.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "WhenOpened": "2026-01-30T13:53:15.738Z"
             },
             {
               "$type": "Document",
@@ -55,8 +54,7 @@
               "RelativeToolTip": "PastebinApi\\Controllers\\PastesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T13:52:56.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-30T13:52:56.545Z"
             },
             {
               "$type": "Document",
@@ -68,8 +66,7 @@
               "RelativeToolTip": "PastebinApi\\Controllers\\HealthzController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T13:52:43.638Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-30T13:52:43.638Z"
             },
             {
               "$type": "Document",
@@ -79,7 +76,7 @@
               "RelativeDocumentMoniker": "PastebinApi\\Program.cs",
               "ToolTip": "D:\\Codes\\Pastebin\\PastebinApi\\PastebinApi\\Program.cs",
               "RelativeToolTip": "PastebinApi\\Program.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAQwDUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-30T13:22:36.142Z",
               "EditorCaption": ""
