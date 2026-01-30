@@ -1,12 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using PastebinApi.Data;
 using PastebinApi.Models;
 
 namespace PastebinApi.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class PastesController : ControllerBase
     {
         private readonly AppDbContext _db;
@@ -18,62 +17,53 @@ namespace PastebinApi.Controllers
             _config = config;
         }
 
+        // POST: /api/pastes
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreatePasteRequest request)
         {
             if (string.IsNullOrWhiteSpace(request.Content))
-            {
                 return BadRequest(new { error = "content is required" });
-            }
 
             if (request.Ttl_Seconds.HasValue && request.Ttl_Seconds <= 0)
-            {
                 return BadRequest(new { error = "ttl_seconds must be >= 1" });
-            }
+
             if (request.Max_Views.HasValue && request.Max_Views <= 0)
-            {
                 return BadRequest(new { error = "max_views must be >= 1" });
-            }
 
             var id = Guid.NewGuid().ToString("N")[..8];
             var now = GetNow();
 
             DateTimeOffset? expiresAt = null;
             if (request.Ttl_Seconds.HasValue)
-            {
                 expiresAt = now.AddSeconds(request.Ttl_Seconds.Value);
-            }
 
             var paste = new Paste
             {
                 Id = id,
                 Content = request.Content,
-                MaxViews = request.Max_Views,
                 Views = 0,
+                MaxViews = request.Max_Views,
                 ExpiresAt = expiresAt
             };
 
             _db.Pastes.Add(paste);
             await _db.SaveChangesAsync();
 
-            var scheme = Request.Scheme;
-            var host = Request.Host.ToString();
-            var url = $"{scheme}://{host}/p/{id}";
-
+            var url = $"{Request.Scheme}://{Request.Host}/p/{id}";
             return Ok(new { id, url });
         }
 
+        // GET: /api/pastes/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(string id)
         {
             var paste = await _db.Pastes.FindAsync(id);
             if (paste == null)
-            {
                 return NotFound(new { error = "Not found" });
-            }
 
             var now = GetNow();
 
+            // Expiry check
             if (paste.ExpiresAt.HasValue && now > paste.ExpiresAt.Value)
             {
                 _db.Pastes.Remove(paste);
@@ -81,12 +71,12 @@ namespace PastebinApi.Controllers
                 return NotFound(new { error = "Expired" });
             }
 
+            // View limit check (BEFORE increment)
             if (paste.MaxViews.HasValue && paste.Views >= paste.MaxViews.Value)
-            {
                 return NotFound(new { error = "View limit exceeded" });
-            }
 
-            paste.Views += 1;
+            // Increment views
+            paste.Views++;
             await _db.SaveChangesAsync();
 
             int? remainingViews = paste.MaxViews.HasValue
@@ -96,7 +86,7 @@ namespace PastebinApi.Controllers
             return Ok(new
             {
                 content = paste.Content,
-                remaining_views = remainingViews,
+                remaining_views = remainingViews, // ✅ correct now
                 expires_at = paste.ExpiresAt?.UtcDateTime.ToString("o")
             });
         }
@@ -104,10 +94,10 @@ namespace PastebinApi.Controllers
         private DateTimeOffset GetNow()
         {
             var testMode = _config["TEST_MODE"];
+
             if (testMode == "1" &&
                 Request.Headers.TryGetValue("x-test-now-ms", out var headerVal) &&
-                headerVal.Count > 0 &&
-                long.TryParse(headerVal.First(), out var ms))
+                long.TryParse(headerVal.FirstOrDefault(), out var ms))
             {
                 return DateTimeOffset.FromUnixTimeMilliseconds(ms);
             }
