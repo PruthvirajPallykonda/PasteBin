@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://pastebinlite-production-84ba.up.railway.app/';
+const API_BASE_URL = 'https://pastebin-production-2639.up.railway.app/';
 
 export async function createPaste(data) {
   const response = await fetch(`${API_BASE_URL}/api/pastes`, {
