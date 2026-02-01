@@ -3,11 +3,9 @@ using PastebinApi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ✅ EF Core + Neon = perfect
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// ✅ CORS POLICY DEFINITION (ADD THIS)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
@@ -22,7 +20,6 @@ builder.Services.AddCors(options =>
     });
 });
 
-// ✅ Controllers + Swagger = good
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -35,13 +32,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// ✅ CORS ENABLED
-app.UseCors("AllowFrontend");  // Now works!
+app.UseCors("AllowFrontend");  
 app.UseAuthorization();
 
 app.MapControllers();
 
-// ✅ Railway port binding
 var port = Environment.GetEnvironmentVariable("PORT");
 if (!string.IsNullOrEmpty(port))
 {
