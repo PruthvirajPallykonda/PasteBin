@@ -35,11 +35,17 @@ For automated testing, the API supports a test mode. When TEST_MODE=1 is enabled
 time is read from the request header: x-test-now-ms. This allows consistent and repeatable test
 results.
 
-Design Notes
-• Uses database-backed storage instead of memory
+Design Decisions
+• Chose database-backed storage instead of in-memory storage to ensure reliability across restarts and deployments.
 • Handles all invalid or expired pastes with HTTP 404
 • Keeps frontend and backend completely separate
 • Designed to pass automated test cases reliably
 Purpose
 This project was created as part of a take-home assignment to demonstrate backend design, API
 handling, frontend integration, and deployment skills
+
+AI tools (ChatGPT) were used selectively during development for architectural review,
+edge-case identification, and validation of best practices. All core implementation,
+integration, debugging, and deployment decisions were independently designed and
+executed by me.
+
